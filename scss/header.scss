@@ -465,31 +465,32 @@
         height: 1px;
         background-color: $mainOrange;
         width: calc(100% - rem(20));
-        // transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
       }
 
-      // @media (any-hover: hover) {
-      //   &:hover {
-      //     color: $mainOrange;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $mainOrange;
 
-      //     &::after {
-      //       opacity: 1;
-      //       visibility: visible;
-      //     }
-      //   }
-      // }
+          &::after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
 
       // @media (min-width: $tablet) {
-      //   &._sub-menu-active {
-      //     &:hover {
-      //       color: $mainOrange;
+      &._sub-menu-active {
+        &:hover {
+          color: $mainOrange;
 
-      //       &::after {
-      //         opacity: 1;
-      //         visibility: visible;
-      //       }
-      //     }
-      //   }
+          &::after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
       // }
 
       // @media (max-width: $tablet) {
@@ -505,8 +506,14 @@
       width: 100%;
       left: 0;
       top: 100%;
+      transition: opacity 0.3s ease 0s;
       background-color: $mainDarkColor;
 
+      // &._sub-menu-open {
+
+      //     opacity: 1;
+      //     visibility: visible;
+      // }
     }
 
     // .menu-catalog__back
@@ -576,9 +583,9 @@
 
   // .sub-menu-catalog__block
   &__block {
-    // display: none;
-    padding: 0px rem(10); ///отличия
-    display: flex;
+    display: none;
+    // padding: 0px rem(10); ///отличия
+    // display: flex;
     // gap: 15px;
     justify-content: space-between;
     // @for $var from 1 to 6 {
@@ -589,6 +596,7 @@
     // }
 
     &._sub-menu-open {
+      display: flex;
       // display: grid;
 
       // @media (max-width: $tablet) {
@@ -632,7 +640,7 @@
 
   // .sub-menu-catalog__list
   &__list {
-    flex:1 1 auto;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
