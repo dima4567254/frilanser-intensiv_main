@@ -349,7 +349,8 @@
   color: #fff;
 
   // .catalog-header__container
-  &__container {}
+  &__container {
+  }
 
   // .catalog-header__menu
   &__menu {}
@@ -500,20 +501,12 @@
 
     // .menu-catalog__sub-menu
     &__sub-menu {
-      opacity: 0;
-      visibility: hidden;
-      position: absolute; //не было
+      
       width: 100%;
       left: 0;
       top: 100%;
       transition: opacity 0.3s ease 0s;
       background-color: $mainDarkColor;
-
-      // &._sub-menu-open {
-
-      //     opacity: 1;
-      //     visibility: visible;
-      // }
     }
 
     // .menu-catalog__back
@@ -538,7 +531,6 @@
 }
 
 .sub-menu-catalog {
-  padding-bottom: rem(30);
   // @media (max-width: $tablet) {
   //   position: fixed;
   //   top: 0;
@@ -579,15 +571,17 @@
   // .sub-menu-catalog__container
   &__container {
     // padding: 0px rem(10);
+    padding: 0;
   }
 
   // .sub-menu-catalog__block
   &__block {
+    padding-bottom: rem(30);
     display: none;
     // padding: 0px rem(10); ///отличия
     // display: flex;
     // gap: 15px;
-    justify-content: space-between;
+    // justify-content: space-between;
     // @for $var from 1 to 6 {
     //   &_#{$var} {
     //     // justify-content: start;			
@@ -606,7 +600,7 @@
   }
 
   &__column {
-    flex: 1 1 auto;
+    flex: 0 1 rem(320);
     display: flex;
     flex-direction: column;
   }
@@ -617,7 +611,7 @@
     font-size: rem(16);
     line-height: math.div(20, 16);
     font-weight: 700;
-    padding: rem(30) rem(10);
+    padding: rem(30) rem(15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
     @media (any-hover: hover) {
@@ -644,7 +638,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: rem(30) rem(10);
+    padding: rem(30) rem(15);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
@@ -685,7 +679,11 @@
   // .sub-menu-catalog__all
   &__all {
     align-self: flex-start;
-    padding: rem(30) rem(10);
+    // padding: rem(30) rem(10);
+    padding-top: rem(30);
+    padding-bottom: 0;
+    padding-left: rem(15);
+    padding-right: rem(15);
     font-size: rem(16);
     color: $mainOrange;
 
