@@ -349,8 +349,7 @@
   color: #fff;
 
   // .catalog-header__container
-  &__container {
-  }
+  &__container {}
 
   // .catalog-header__menu
   &__menu {}
@@ -501,7 +500,7 @@
 
     // .menu-catalog__sub-menu
     &__sub-menu {
-      
+
       width: 100%;
       left: 0;
       top: 100%;
@@ -553,6 +552,14 @@
   &__back {
     // display: none;
 
+    margin-bottom: rem(30);
+
+    .sub-menu-open & {
+      // display: flex;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
     @media (max-width: $tablet) {
       // display: inline-flex;
       // align-items: center;
@@ -570,8 +577,8 @@
 
   // .sub-menu-catalog__container
   &__container {
-    // padding: 0px rem(10);
-    padding: 0;
+    padding: 0px rem(10);
+    // padding: 0;
   }
 
   // .sub-menu-catalog__block
@@ -582,27 +589,21 @@
     // display: flex;
     // gap: 15px;
     // justify-content: space-between;
-    // @for $var from 1 to 6 {
-    //   &_#{$var} {
-    //     // justify-content: start;			
-    //     grid-template-columns: repeat($var, minmax(auto, rem(320)));
-    //   }
-    // }
+    @for $var from 1 to 6 {//типо оптимизация так бы пришлось писать 6 раз
+      &_#{$var} {
+        // justify-content: start;			
+        grid-template-columns: repeat($var, minmax(auto, rem(320)));
+      }
+    }
 
     &._sub-menu-open {
-      display: flex;
-      // display: grid;
+      // display: flex;
+      display: grid;
 
       // @media (max-width: $tablet) {
       //   display: block;
       // }
     }
-  }
-
-  &__column {
-    flex: 0 1 rem(320);
-    display: flex;
-    flex-direction: column;
   }
 
   // .sub-menu-catalog__category
