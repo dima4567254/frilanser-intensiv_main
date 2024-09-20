@@ -11,6 +11,7 @@ import { flsModules } from "./modules.js";
 // 3,30 js
 // 3,35
 // 3,37
+// 4.11
 // потом проверить правильно ли
 document.addEventListener("click", documentActions);
 
