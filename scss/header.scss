@@ -2,9 +2,9 @@
 
 //====================================================================================================
 
-.header {
-  &__top {}
-}
+// .header {
+//   &__top {}
+// }
 
 .top-header {
   background-color: $mainDarkColor;
@@ -46,8 +46,7 @@
   }
 }
 
-.menu {
-  &__body {}
+.menu-top-header {
 
   &__list {
     display: flex;
@@ -72,6 +71,8 @@
     }
   }
 }
+
+// .menu {}
 
 .body-header {
   padding: 0 rem(10);
@@ -137,13 +138,11 @@
 .actions-header {
   display: flex;
   align-items: center;
-  column-gap: rem(30);
+  @include adaptiveValue("column-gap", 30, 20, 1620, 1000, 1);
 
   @media (max-width: $tablet) {
     display: none;
   }
-
-  @include adaptiveValue("column-gap", 30, 20, 1620, 1000, 1);
 
   &__location {
     display: flex;
@@ -244,7 +243,7 @@
     top: 100%;
     width: 100%;
     left: 0;
-    // z-index: 2;
+    z-index: 2;
     margin: rem(5) 0px 0px 0px;
     border-radius: rem(10);
     background-color: #fff;
@@ -314,7 +313,7 @@
   &__body {
     line-height: math.div(20, 16);
     font-size: rem(16);
-    // flex: 0 0 auto;
+    flex: 0 0 auto;
 
     @media (max-width: em(1250)) {
       display: none;
