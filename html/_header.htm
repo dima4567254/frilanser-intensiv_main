@@ -4,6 +4,8 @@
 <!-- начал заного 4,28.53-->
 <!-- начал заного 4,41.28-->
 <!-- начал заного 4,48.02-->
+<!-- начал заного 5,00.02-->
+<!-- но вернуся к 4,55, -->
 <!-- npm run dev -->
 <!-- 2.10 обеснярет как работает шаблон -->
 <!-- 2,15 про подключения попапа -->
@@ -11,7 +13,7 @@
 <!-- c 3 часов понял что верстка отличается  -->
 <!-- 3.24 3.30 js -->
 <!-- узнать как фрилансер делает коменты и копирует классы (коменты создаются в месте с класами)-->
- <!-- 4.47 про динамический адаптив перекидывания секций html -->
+<!-- 4.47 про динамический адаптив перекидывания секций html -->
 
 <!-- копировать потом выключать и включать -->
 <!-- возможно название категорий отличается -->
@@ -229,19 +231,22 @@
 <header class="header">
   <div class="header__top top-header">
     <div class="top-header__container">
-      <nav class="top-header__menu menu-top-heder">
-        <ul class="menu-top-heder__list">
-          <li class="menu-top-heder__item">
-            <a href="" class="menu-top-heder__link">О нас</a>
+      <nav class="top-header__menu menu-top-header">
+        <ul data-da=".menu__body, 991.98" class="menu-top-header__list">
+          <li class="menu-top-header__item menu-top-header__item_catalog">
+            <a href="" data-catalog class="menu-top-header__link menu-top-header__link_catalog _icon-arrow-buttom">Kaталог товаров</a>
           </li>
-          <li class="menu-top-heder__item">
-            <a href="" class="menu-top-heder__link">Оплата и доставка</a>
+          <li class="menu-top-header__item">
+            <a href="" class="menu-top-header__link">О нас</a>
           </li>
-          <li class="menu-top-heder__item">
-            <a href="" class="menu-top-heder__link">Новости</a>
+          <li class="menu-top-header__item">
+            <a href="" class="menu-top-header__link">Оплата и доставка</a>
           </li>
-          <li class="menu-top-heder__item">
-            <a href="" class="menu-top-heder__link">Контакты</a>
+          <li class="menu-top-header__item">
+            <a href="" class="menu-top-header__link">Новости</a>
+          </li>
+          <li class="menu-top-header__item">
+            <a href="" class="menu-top-header__link">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -252,7 +257,8 @@
         <button type="button" class="menu__icon icon-menu">
           <span></span>
         </button>
-        <div class="menu__body"></div>
+        <div class="menu__body">
+        </div>
       </nav>
     </div>
   </div>
@@ -304,7 +310,7 @@
       </div>
     </div>
   </div>
-
+  <!-- data-da=".menu__body, 991.98" -->
   <div class="header__catalog catalog-header">
     <div class="catalog-header__container">
       <nav class="catalog-header__menu menu-catalog">
