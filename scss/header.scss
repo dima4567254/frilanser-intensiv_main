@@ -50,18 +50,22 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
+
     row-gap: 5px;
     @include adaptiveValue("column-gap", 60, 20);
-    line-height: math.div(20, 16);
+
+    // line-height: math.div(20, 16);
+    @media (min-width: $tablet) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
-    // &:first-child {
-    //   @media (min-width: $tablet) {
-    //     display: none;
-    //   }
-    // }
+    &_catalog {
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
 
     &_catalog {
       @media (min-width: $tablet) {
@@ -83,8 +87,22 @@
     }
 
     &_catalog {
-      @media (min-width: $tablet) {
-        display: none;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      // @media (min-width: $tablet) {
+      //   display: none;
+      // }
+      // position: relative;
+
+      &::before {
+        flex: 0 0 14px;
+        height: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem(8);
+        transform: translateY(rem(-2)) rotate(-90deg);
       }
     }
   }
