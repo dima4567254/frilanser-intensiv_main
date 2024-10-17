@@ -50,13 +50,13 @@
 
   &__list {
     display: flex;
-
-    row-gap: 5px;
     @include adaptiveValue("column-gap", 60, 20);
 
     // line-height: math.div(20, 16);
-    @media (min-width: $tablet) {
-      flex-wrap: wrap;
+    @media (max-width: $tablet) {
+      // flex-wrap: wrap;
+      flex-direction: column;
+      row-gap: 15px;
     }
   }
 
@@ -105,11 +105,12 @@
         transform: translateY(rem(-2)) rotate(-90deg);
       }
     }
-  }
 
-  // @media (max-width: $tablet) {
-  //   display: none;
-  // }
+    @media (max-width: $tablet) {
+      // display: none;
+      @include adaptiveValue("font-size", 30, 16, 992, 320, 1);
+    }
+  }
 }
 
 .menu {
@@ -146,12 +147,11 @@
       //   }
       // }
     }
-  }
 
-  // display: none;
-  @media (max-width: $tablet) {
-    flex: 0 0 30%;
-    display: block;
+    @media (max-width: $tablet) {
+      flex: 0 0 30%;
+      display: block;
+    }
   }
 }
 
